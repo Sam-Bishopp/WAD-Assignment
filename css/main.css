@@ -1,0 +1,41 @@
+h1 {
+    font-size: 200%;
+    text-align: center;
+    background-color: #c2c2c2;
+}
+
+body {
+    background-color: #d3d3d3;
+    font-family: helvetica, ariel;
+}
+
+p {
+    font-size: 20px;
+}
+
+#nav ul{
+    float: right;
+    border: 1px solid;
+    padding: 10px;
+}
+
+#nav h3{
+    float: right;
+    padding: 10px;
+    clear: both;
+}
+
+li {
+    padding: 5px;
+}
+
+#ajax-response {
+    border: 1px solid;
+    padding: 10px;
+    width: 27%;
+}
+
+#map1 {
+    float: right;
+    padding: 10px;
+}

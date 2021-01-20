@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Places To Stay</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <script type='text/javascript' src='script.js'></script>
+
+        <!-- Leaflet Files -->
+        <link rel='stylesheet' href='https://unpkg.com/leaflet@1.5.1/dist/leaflet.css'/>
+        <script type='text/javascript' src='https://unpkg.com/leaflet@1.5.1/dist/leaflet.js'></script>
+    </head>
+    
+    <body onload="init()">
+        <h1>Places To Stay</h1>
+        
+        <!-- Leaflet Map display -->
+        <div id="map1" style="width:400px; height:400px"> </div>
+
+        <!-- User searches for an accommodation using location -->
+        <div class="loc-search">
+            <h2>Search For Accommodation By Location</h2>
+                <form method="GET" action="webservices/p2s-acc-location.php">
+                    <p>
+                        <input type="text" name="location" id="location"/>
+                        <input type="submit" value="Search!"/>
+                    </p>
+                </form>
+        </div>
+
+        <!-- User searches for an accommodation using type and location -->
+        <div class="type-loc-search">
+            <h2>Search For Accommodation By Location & Type</h2>
+            <form method="GET" action="webservices/p2s-acc-type-location.php">
+                <p>
+                    Location:
+                    <input type="text" name="location2" id="location2"/>
+                </p>
+                <p>
+                    Type:
+                    <input type="text" name="type" id="type"/>
+                </p>
+                <p>
+                    <input type="submit" value="Search!"/>
+                </p>
+            </form>
+        </div>
+
+        <!-- User books accommodation here -->
+        <div class="booking">
+            <h2>Book Your Accommodation</h2>
+            <p><a href="accommodations.php">Click here to book an accommodation</a></p>
+        </div>
+
+        <!-- AJAX search for accommodation by location -->
+        <div class="ajax-search">
+            <h2>Search for a location using AJAX</h2>
+            Location:<input id="location3">
+            <input type="button" id="btn-ajax" value="AJAX Search!">
+        </div>
+
+        <div id="nav">
+            <h3>Site Navigation</h3>
+            <ul style="list-style-type:none;">
+                <li><a href="accommodations.php">Book an accommodation</a></li>
+                <li><a href="visit-hampshire.php">Visit Hampshire Website</a></li>
+            </ul>
+        </div>
+
+        <br/>
+        
+        <!-- AJAX results go here -->
+        <div id="ajax-response"> </div>
+    </body>
+</html>
